@@ -131,8 +131,9 @@ function App() {
 
   const fetchDataUsingGemini = async (data) => {
     const prompt = `You are a medical expert. Read the following medical report and provide a concise, structured summary. Highlight key findings, possible diagnoses, and actionable recommendations. Use clear, professional language.\n\nMedical Report:\n${data}`;
-    const apiKey = 'AIzaSyB9w7VaEY6cqv-KtfDqUl0bgSUrLd5jpqA';
-    const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
+    const apiKey = 'AIzaSyBUjTYsHFr42Ivq3VsRFDF6pHkbeTmZrWA'; 
+    // const apiKey = import.meta.env.VITE_GEMINI_API_KEY;
+    const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-3-flash-preview:generateContent?key=${apiKey}`;
     const requestBody = {
       contents: [
         {
